@@ -45,7 +45,7 @@ namespace Articles.Domain
 
         public void Apply(ArticleRenamed @event)
         {
-            // nothing yet
+            _name = @event.Name;
         }
     }
 }

@@ -70,4 +70,26 @@ namespace Articles.Domain
         static Article article;
         static Exception exception;
     }
+
+    [Subject(typeof(Article))]
+    public class When_renaming_an_article_to_same_name_after_rename
+    {
+        Establish context = () =>
+        {
+            id = Guid.NewGuid();
+            article = new Event[]
+                          {
+                              new ArticleInserted(id, "First"),
+                              new ArticleRenamed(id, "Second")
+                          }.RestoreAggregate<Article>();
+        };
+
+        Because of = () => exception = Catch.Exception(() => article.Rename("Second"));
+
+        It should_not_be_possible = () => exception.ShouldNotBeNull();
+
+        static Guid id;
+        static Article article;
+        static Exception exception;
+    }
 }
