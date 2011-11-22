@@ -28,4 +28,25 @@ namespace Articles.Domain
         static Guid id;
         static Article article;
     }
+
+    [Subject(typeof(Article))]
+    public class When_renaming_an_article_to_empty_name
+    {
+        Establish context = () =>
+        {
+            id = Guid.NewGuid();
+            article = new Event[]
+                          {
+                              new ArticleInserted(id, "Before")
+                          }.RestoreAggregate<Article>();
+        };
+
+        Because of = () => exception = Catch.Exception(() => article.Rename(""));
+
+        It should_not_be_possible = () => exception.ShouldNotBeNull();
+
+        static Guid id;
+        static Article article;
+        static Exception exception;
+    }
 }

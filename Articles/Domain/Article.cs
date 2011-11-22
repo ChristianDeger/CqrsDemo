@@ -32,6 +32,9 @@ namespace Articles.Domain
 
         public void Rename(string name)
         {
+            if (string.IsNullOrEmpty(name))
+                throw new ArgumentException("Name cannot be empty");
+
             ApplyAndStoreChange(new ArticleRenamed(_id, name));
         }
 
