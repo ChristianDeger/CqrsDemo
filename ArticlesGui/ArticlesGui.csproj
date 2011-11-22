@@ -55,6 +55,7 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Controllers\ArticlesController.cs" />
     <Compile Include="CommandResult.cs" />
+    <Compile Include="Controllers\InsertArticleInputModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
