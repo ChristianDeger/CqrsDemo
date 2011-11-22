@@ -48,6 +48,8 @@
     <Compile Include="Events\ArticleInserted.cs" />
     <Compile Include="Events\ArticleRenamed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadModel\ArticleDetailsDto.cs" />
+    <Compile Include="ReadModel\ArticleDetailsEventHandler.cs" />
     <Compile Include="ReadModel\ArticleListDto.cs" />
     <Compile Include="ReadModel\ArticleListEventHandler.cs" />
     <Compile Include="ReadModel\ArticleReadModelFacade.cs" />
