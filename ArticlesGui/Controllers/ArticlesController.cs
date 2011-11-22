@@ -38,5 +38,19 @@ namespace ArticlesGui.Controllers
         {
             return View(_readModel.GetArticleDetails(id));
         }
+
+        [HttpPost]
+        public ActionResult Rename(Guid id, string name, int version)
+        {
+            try
+            {
+                _commandSender.Send(new RenameArticle(id, name, version));
+                return CommandResult.Success;
+            }
+            catch (Exception e)
+            {
+                return CommandResult.Error(e.Message);
+            }
+        }
     }
 }

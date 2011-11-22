@@ -7,12 +7,10 @@
 
 <h2>Article Details</h2>
 
-@Model.Name
-
-@*<div class="details-row">
+<div class="details-row">
     Name: @Html.InPlaceEditFor(x => Model.Name, "/Articles/Rename", new { @data_id = Model.ArticleId, @data_version = Model.Version })
 </div>
-*@
+
 @*<div class="details-row">
     Price: @Html.InPlaceEditFor(x => Model.Price, "/Articles/ChangePrice", new { @data_id = Model.ArticleId, @data_version = Model.Version })
 </div>
