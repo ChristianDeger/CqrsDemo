@@ -25,6 +25,7 @@ namespace ArticlesGui
             discovery.AddMessageReciever(new ArticleCommandHandler(repository));
             discovery.AddMessageReciever(new ArticleListEventHandler());
             discovery.AddMessageReciever(new ArticleDetailsEventHandler());
+            discovery.AddMessageReciever(new ArticlePriceChangedEventHandler());
 
             ServiceLocator.RegisterBus(bus);
         }
