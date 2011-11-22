@@ -52,5 +52,19 @@ namespace ArticlesGui.Controllers
                 return CommandResult.Error(e.Message);
             }
         }
+
+        [HttpPost]
+        public ActionResult ChangePrice(Guid id, int price, int version)
+        {
+            try
+            {
+                _commandSender.Send(new ChangeArticlePrice(id, price, version));
+                return CommandResult.Success;
+            }
+            catch (Exception e)
+            {
+                return CommandResult.Error(e.Message);
+            }
+        }
     }
 }
