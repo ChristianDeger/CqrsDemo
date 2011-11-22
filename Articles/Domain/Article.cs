@@ -53,7 +53,7 @@ namespace Articles.Domain
             if (price <= 0)
                 throw new ArgumentException("Price must be positive");
 
-            ApplyAndStoreChange(new ArticlePriceChanged(_id, price));
+            ApplyAndStoreChange(new ArticlePriceChanged(_id, price, DateTime.Now));
         }
 
         public void Apply(ArticlePriceChanged @event)

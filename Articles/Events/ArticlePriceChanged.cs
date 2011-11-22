@@ -7,11 +7,13 @@ namespace Articles.Events
     {
         public readonly Guid Id;
         public readonly int Price;
+        public readonly DateTime ChangedAt;
 
-        public ArticlePriceChanged(Guid id, int price)
+        public ArticlePriceChanged(Guid id, int price, DateTime changedAt)
         {
             Id = id;
             Price = price;
+            ChangedAt = changedAt;
         }
     }
 }

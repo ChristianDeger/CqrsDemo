@@ -7,6 +7,7 @@ namespace Articles.ReadModel
     {
         IEnumerable<ArticleListDto> GetArticles();
         ArticleDetailsDto GetArticleDetails(Guid id);
+        ArticePriceHistoryDto GetPriceHistory(Guid id);
     }
 
     public class ArticleReadModelFacade : IArticleReadModelFacade
@@ -19,6 +20,11 @@ namespace Articles.ReadModel
         public ArticleDetailsDto GetArticleDetails(Guid id)
         {
             return Database.ArticleDetails[id];
+        }
+
+        public ArticePriceHistoryDto GetPriceHistory(Guid id)
+        {
+            return Database.ArticePriceHistories[id];
         }
     }
 }
