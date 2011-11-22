@@ -1,11 +1,13 @@
-﻿@*@using Articles.ReadModel*@
+﻿@using Articles.ReadModel
 @using ArticlesGui.Views
-@*@model ArticleDetailsDto*@
+@model ArticleDetailsDto
 @{
     ViewBag.Title = "Article Details";
 }
 
 <h2>Article Details</h2>
+
+@Model.Name
 
 @*<div class="details-row">
     Name: @Html.InPlaceEditFor(x => Model.Name, "/Articles/Rename", new { @data_id = Model.ArticleId, @data_version = Model.Version })

@@ -33,5 +33,10 @@ namespace ArticlesGui.Controllers
             _commandSender.Send(new InsertArticle(Guid.NewGuid(), model.Name));
             return RedirectToAction("List");
         }
+
+        public ActionResult Details(Guid id)
+        {
+            return View(_readModel.GetArticleDetails(id));
+        }
     }
 }
