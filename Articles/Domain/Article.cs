@@ -29,5 +29,15 @@ namespace Articles.Domain
         {
             _id = @event.Id;
         }
+
+        public void Rename(string name)
+        {
+            ApplyAndStoreChange(new ArticleRenamed(_id, name));
+        }
+
+        public void Apply(ArticleRenamed @event)
+        {
+            // nothing yet
+        }
     }
 }
