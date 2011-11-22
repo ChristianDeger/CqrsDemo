@@ -3,7 +3,8 @@ using Infrastructure;
 
 namespace Articles.Domain
 {
-    public class ArticleCommandHandler : IHandles<InsertArticle>
+    public class ArticleCommandHandler : IHandles<InsertArticle>,
+        IHandles<RenameArticle>
     {
         readonly IRepository<Article> _repository;
 
@@ -16,6 +17,13 @@ namespace Articles.Domain
         {
             var article = new Article(message.Id, message.Name);
             _repository.Save(article, -1);
+        }
+
+        public void Handle(RenameArticle message)
+        {
+            var article = _repository.GetById(message.Id);
+            article.Rename(message.Name);
+            _repository.Save(article, message.OriginalVersion);
         }
     }
 }
