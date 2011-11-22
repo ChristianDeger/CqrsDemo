@@ -19,6 +19,9 @@ namespace Articles.Domain
 
         public Article(Guid id, string name)
         {
+            if (string.IsNullOrEmpty(name))
+                throw new ArgumentException("Name cannot be empty");
+
             ApplyAndStoreChange(new ArticleInserted(id, name));
         }
 
