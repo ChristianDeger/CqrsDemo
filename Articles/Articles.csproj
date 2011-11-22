@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AggregateRootTestHelper.cs" />
+    <Compile Include="Commands\InsertArticle.cs" />
+    <Compile Include="Events\ArticleInserted.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -52,9 +54,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Commands\" />
     <Folder Include="Domain\" />
-    <Folder Include="Events\" />
     <Folder Include="ReadModel\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
