@@ -1,4 +1,5 @@
-﻿using Infrastructure;
+﻿using Articles.ReadModel;
+using Infrastructure;
 
 namespace ArticlesGui
 {
@@ -14,6 +15,11 @@ namespace ArticlesGui
         public static ICommandSender CommandSender
         {
             get { return _bus; }
+        }
+
+        public static IArticleReadModelFacade ArticlesReadModel
+        {
+            get { return new ArticleReadModelFacade(); }
         }
     }
 }

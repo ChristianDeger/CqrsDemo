@@ -1,5 +1,5 @@
-﻿@*@using Articles.ReadModel*@
-@*@model IEnumerable<ArticleListDto>*@
+﻿@using Articles.ReadModel
+@model IEnumerable<ArticleListDto>
 
 @{
     ViewBag.Title = "Articles";
@@ -7,12 +7,13 @@
 
 <h2>Articles</h2>
 <ul>
-@*    @foreach (var article in Model)
+    @foreach (var article in Model)
     {
         <li>
-            @Html.ActionLink(article.Name, "Details", new { Id = article.ArticleId })
+        @article.Name
+            @*@Html.ActionLink(article.Name, "Details", new { Id = article.ArticleId })*@
         </li>
     }
-*@
+
 </ul>
 @*@Html.ActionLink("Insert article", "Insert")*@

@@ -4,12 +4,12 @@ namespace Articles.ReadModel
 {
     public class ArticleListDto
     {
-        public Guid Id;
+        public Guid ArticleId;
         public string Name;
 
-        public ArticleListDto(Guid id, string name)
+        public ArticleListDto(Guid articleId, string name)
         {
-            Id = id;
+            ArticleId = articleId;
             Name = name;
         }
     }
