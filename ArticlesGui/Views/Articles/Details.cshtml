@@ -1,0 +1,21 @@
+﻿@*@using Articles.ReadModel*@
+@using ArticlesGui.Views
+@*@model ArticleDetailsDto*@
+@{
+    ViewBag.Title = "Article Details";
+}
+
+<h2>Article Details</h2>
+
+@*<div class="details-row">
+    Name: @Html.InPlaceEditFor(x => Model.Name, "/Articles/Rename", new { @data_id = Model.ArticleId, @data_version = Model.Version })
+</div>
+*@
+@*<div class="details-row">
+    Price: @Html.InPlaceEditFor(x => Model.Price, "/Articles/ChangePrice", new { @data_id = Model.ArticleId, @data_version = Model.Version })
+</div>
+*@
+
+@*<div>@Html.ActionLink("Price history", "Prices", "Articles", new { id = Model.ArticleId }, null)</div>*@
+
+<script src="/Scripts/inplace-edit.js" type="text/javascript"></script>

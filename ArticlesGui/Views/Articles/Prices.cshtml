@@ -1,0 +1,13 @@
+﻿@*@using Articles.ReadModel
+@model ArticlePriceHistoryDto
+@{
+    ViewBag.Title = "Article Price History";
+}
+
+<h2>Article Price History</h2>
+
+<h3>@Model.Name</h3>
+@foreach (var change in Model.PriceChanges)
+{
+    <div>@change.ChangedAt - @change.Price</div>
+}*@
