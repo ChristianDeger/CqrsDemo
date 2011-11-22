@@ -6,6 +6,7 @@ namespace Articles.ReadModel
     {
         public Guid ArticleId;
         public string Name;
+        public int Price;
         public int Version;
     }
 }
