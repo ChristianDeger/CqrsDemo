@@ -66,5 +66,10 @@ namespace ArticlesGui.Controllers
                 return CommandResult.Error(e.Message);
             }
         }
+
+        public ActionResult Prices(Guid id)
+        {
+            return View(_readModel.GetPriceHistory(id));
+        }
     }
 }

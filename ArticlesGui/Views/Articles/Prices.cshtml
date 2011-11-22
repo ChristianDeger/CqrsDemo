@@ -1,4 +1,4 @@
-﻿@*@using Articles.ReadModel
+﻿@using Articles.ReadModel
 @model ArticlePriceHistoryDto
 @{
     ViewBag.Title = "Article Price History";
@@ -10,4 +10,4 @@
 @foreach (var change in Model.PriceChanges)
 {
     <div>@change.ChangedAt - @change.Price</div>
-}*@
+}
