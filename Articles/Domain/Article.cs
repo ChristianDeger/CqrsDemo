@@ -47,5 +47,15 @@ namespace Articles.Domain
         {
             _name = @event.Name;
         }
+
+        public void ChangePrice(int price)
+        {
+            ApplyAndStoreChange(new ArticlePriceChanged(_id, price));
+        }
+
+        public void Apply(ArticlePriceChanged @event)
+        {
+            // nothing yet
+        }
     }
 }

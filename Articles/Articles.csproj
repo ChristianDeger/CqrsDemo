@@ -40,12 +40,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AggregateRootTestHelper.cs" />
+    <Compile Include="Commands\ChangeArticlePrice.cs" />
     <Compile Include="Commands\InsertArticle.cs" />
     <Compile Include="Commands\RenameArticle.cs" />
     <Compile Include="Domain\Article.cs" />
     <Compile Include="Domain\ArticleCommandHandler.cs" />
     <Compile Include="Domain\ArticleSpecs.cs" />
     <Compile Include="Events\ArticleInserted.cs" />
+    <Compile Include="Events\ArticlePriceChanged.cs" />
     <Compile Include="Events\ArticleRenamed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadModel\ArticleDetailsDto.cs" />
