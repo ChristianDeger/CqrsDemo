@@ -50,6 +50,9 @@ namespace Articles.Domain
 
         public void ChangePrice(int price)
         {
+            if (price <= 0)
+                throw new ArgumentException("Price must be positive");
+
             ApplyAndStoreChange(new ArticlePriceChanged(_id, price));
         }
 
