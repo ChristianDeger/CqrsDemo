@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Articles.ReadModel
 {
-    public class ArticePriceHistoryDto
+    public class ArticlePriceHistoryDto
     {
         public Guid ArticleId;
         public string Name;

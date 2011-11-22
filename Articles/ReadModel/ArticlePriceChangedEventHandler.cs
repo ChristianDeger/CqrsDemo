@@ -10,11 +10,11 @@ namespace Articles.ReadModel
         public void Handle(ArticleInserted message)
         {
             Database.ArticePriceHistories.Add(message.Id,
-                                              new ArticePriceHistoryDto
+                                              new ArticlePriceHistoryDto
                                                   {
                                                       ArticleId = message.Id,
                                                       Name = message.Name,
-                                                      PriceChanges = new List<ArticePriceHistoryDto.PriceChange>()
+                                                      PriceChanges = new List<ArticlePriceHistoryDto.PriceChange>()
                                                   });
         }
 
@@ -26,7 +26,7 @@ namespace Articles.ReadModel
         public void Handle(ArticlePriceChanged message)
         {
             Database.ArticePriceHistories[message.Id].PriceChanges
-                .Add(new ArticePriceHistoryDto.PriceChange {ChangedAt = message.ChangedAt, Price = message.Price});
+                .Add(new ArticlePriceHistoryDto.PriceChange {ChangedAt = message.ChangedAt, Price = message.Price});
         }
     }
 }
