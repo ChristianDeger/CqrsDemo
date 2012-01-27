@@ -1,0 +1,12 @@
+https://github.com/openrasta/openrasta-core
+Branch 2.1
+September 28, 2011
+Commit 169e8e68f3
+
+https://github.com/openrasta/openrasta-hosting-aspnet
+Branch master
+August 16, 2011
+Commit 15a01a5851
+
+Built with
+msbuild /p:Configuration=Release
