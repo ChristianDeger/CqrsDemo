@@ -15,6 +15,7 @@ namespace ArticlesService
             WireupInfrastructure();
 
             ServiceLocator.CommandSender.Send(new InsertArticle(Guid.NewGuid(), "Test"));
+            ServiceLocator.CommandSender.Send(new InsertArticle(Guid.NewGuid(), "Test2"));
         }
 
         void WireupInfrastructure()
