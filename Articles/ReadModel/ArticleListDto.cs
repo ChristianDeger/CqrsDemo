@@ -2,6 +2,7 @@
 
 namespace Articles.ReadModel
 {
+    [Serializable]
     public class ArticleListDto
     {
         public Guid ArticleId;
