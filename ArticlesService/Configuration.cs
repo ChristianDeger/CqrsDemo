@@ -1,6 +1,5 @@
-﻿using ArticlesService.Infrastructure;
-using ArticlesService.List;
-
+﻿using ArticlesService.ArticleList;
+using ArticlesService.Infrastructure;
 using OpenRasta.Configuration;
 using OpenRasta.Web;
 

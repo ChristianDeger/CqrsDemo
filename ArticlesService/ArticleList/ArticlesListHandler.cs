@@ -1,6 +1,6 @@
 ﻿using Articles.ReadModel;
 
-namespace ArticlesService.List
+namespace ArticlesService.ArticleList
 {
     public class ArticlesListHandler
     {
@@ -13,7 +13,7 @@ namespace ArticlesService.List
 
         public ArticlesListResource Get()
         {
-            return new ArticlesListResource { Articles = _readModel.GetArticles() };
+            return new ArticlesListResource(_readModel.GetArticles());
         }
     }
 }

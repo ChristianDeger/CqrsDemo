@@ -12,8 +12,8 @@ namespace ArticlesService.Infrastructure
 
         static PipelineContinuation AddCorsResponseHeaders(ICommunicationContext context)
         {
-            context.Response.Headers.Add("Access-Control-Allow-Origin", "*");
-            context.Response.Headers.Add("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+            context.Response.Headers["Access-Control-Allow-Origin"] = "*";
+            context.Response.Headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS";
             return PipelineContinuation.Continue;
         }
     }

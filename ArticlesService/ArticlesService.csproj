@@ -68,8 +68,8 @@
     <Compile Include="HomeHandler.cs" />
     <Compile Include="HomeResource.cs" />
     <Compile Include="Infrastructure\EnableCorsResponse.cs" />
-    <Compile Include="List\ArticlesListHandler.cs" />
-    <Compile Include="List\ArticlesListResource.cs" />
+    <Compile Include="ArticleList\ArticlesListHandler.cs" />
+    <Compile Include="ArticleList\ArticlesListResource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceLocator.cs" />
   </ItemGroup>
