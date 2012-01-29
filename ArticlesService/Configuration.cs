@@ -1,4 +1,5 @@
-﻿using ArticlesService.List;
+﻿using ArticlesService.Infrastructure;
+using ArticlesService.List;
 
 using OpenRasta.Configuration;
 using OpenRasta.Web;
@@ -13,6 +14,8 @@ namespace ArticlesService
 
             using (OpenRastaConfiguration.Manual)
             {
+                ResourceSpace.Uses.PipelineContributor<EnableCorsResponse>();
+
                 ResourceSpace.Has.ResourcesOfType<HomeResource>()
                     .AtUri("/")
                     .HandledBy<HomeHandler>()

@@ -67,6 +67,7 @@
     <Compile Include="Configuration.cs" />
     <Compile Include="HomeHandler.cs" />
     <Compile Include="HomeResource.cs" />
+    <Compile Include="Infrastructure\EnableCorsResponse.cs" />
     <Compile Include="List\ArticlesListHandler.cs" />
     <Compile Include="List\ArticlesListResource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
