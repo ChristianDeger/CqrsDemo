@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArticlesGui", "ArticlesGui\ArticlesGui.csproj", "{F08F0779-3194-4CEC-A538-8B2DEF4DB70B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Articles", "Articles\Articles.csproj", "{7C5FF108-2E25-4543-8377-8EF7980D16B4}"
